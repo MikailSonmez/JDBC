@@ -49,11 +49,16 @@ public class Day01_JdbcQuery02 {
 		  ve maaslarini, bolum ve maas sirali listeleyiniz. NOT: calisani olmasa 
 		  bile bolum ismi gosterilmelidir.
 		========================================================================*/ 
-		String sorgu3= "Select b.bolum_isim, p.isim, p.maas from bolumler b left join personel p on p.bolum_id=b.bolum_id order by b.bolum_isim, p.maas ";
+		String sorgu3= "Select b.bolum_isim, p.isim, p.maas "
+				+ "from bolumler b left join personel "
+				+ "p on p.bolum_id=b.bolum_id "
+				+ "order by b.bolum_isim, p.maas ";
 		ResultSet tablo3 = st.executeQuery(sorgu3);
 		
 		while (tablo3.next()) {
-			System.out.println("Bolum: "+tablo3.getString(1) +"\t\tCalisan isim: "+tablo3.getString(2) +"\t\tmaas: "+ tablo3.getInt(3));
+			System.out.println("Bolum: "+tablo3.getString(1) +
+					"\t\tCalisan isim: "+tablo3.getString(2) +
+					"\t\tmaas: "+ tablo3.getInt(3));
 		}
 		
 		System.out.println("========================================================================");
@@ -67,7 +72,9 @@ public class Day01_JdbcQuery02 {
 		ResultSet tablo4 = st.executeQuery(sorgu4);
 		
 		while (tablo4.next()) {
-			System.out.println("Bolum: "+tablo4.getString(1) +"\t\tCalisan isim: "+tablo4.getString(2) +"\t\tmaas: "+ tablo4.getInt(3));
+			System.out.println("Bolum: "+tablo4.getString(1) +
+					"\t\tCalisan isim: "+tablo4.getString(2) +
+					"\t\tmaas: "+ tablo4.getInt(3));
 		}
 		
 		con.close();

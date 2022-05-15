@@ -86,9 +86,9 @@ public class Day01_JdbcDDL01 {
 //			/*=======================================================================
 //			  ORNEK6:isciler tablosunun adini calisanlar olarak degistiriniz.  
 //			========================================================================*/
-//			String alterQuery4 = "ALTER TABLE isciler RENAME TO calisanlar";
-//			st.execute(alterQuery4);
-//			System.out.println("isciler tablosunun adi calisanlar olarak degismistir..");
+	//		String alterQuery4 = "ALTER TABLE isciler RENAME TO calisanlar";
+	//		st.execute(alterQuery4);
+	//		System.out.println("isciler tablosunun adi calisanlar olarak degismistir..");
 			
 			/*=======================================================================
 			  ORNEK7:calisanlar tablosunu siliniz.  
